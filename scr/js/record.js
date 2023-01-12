@@ -18,7 +18,7 @@ const arrayDates = () => {
     arrayDate.push(calculateDate(now, 6));
     return arrayDate
 }
-
+//data
 export let labelsDays = arrayDates();
 
 // export var labelsDates = [];
