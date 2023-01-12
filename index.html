@@ -4,15 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CoinGecko</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="./scr/css/descktop.css">
 </head>
 <body>
-    <header>
-        <img src="./scr/assets/coingeckoLogo.svg" alt="Logo">
+    <header class="bg-black d-flex align-items-center">
+        <div class="logo-wrapper w-25">
+            <img src="https://via.placeholder.com/250x100.png" alt="logo">
+        </div>
+        <nav class="w-75 d-flex justify-content-around align-items-center">
+            <ul class="list-unstyled d-flex">
+                <li class="p-2">
+                    <a href="#" class="text-decoration-none">Comprar cripto</a>
+                </li>
+                <li class="p-2">
+                    <a href="#" class="text-decoration-none">Mercados</a>
+                </li>
+                <li class="p-2">
+                    <a href="#" class="text-decoration-none">Trade</a>
+                </li>
+                <li class="p-2">
+                    <a href="#" class="text-decoration-none">Finanzas</a>
+                </li>
+            </ul>
+            <div class="w-25">
+                <button type="button" class="btn btn-primary">Registrarse</button>
+                <button type="button" class="btn btn-secondary">Iniciar Sesion</button>
+            </div>
+        </nav>
     </header>
     <main>
+        <section class="col-12 p-5">
+            <div class="info-wrapper row p-3">
+                <div class="col-4 w-50">
+                    <img class="img-fluid rounded-3" src="./scr/assets/bitcoin-g0c43dc517_1920.jpg" alt="Imagen criptomoneda">
+                </div>
+                <div class="col-6 p-3">
+                    <h3 class="title">¿Que son las criptomonedas?</h3>
+                    <hr>
+                    <p class="">
+                        Una criptomoneda es un activo digital que emplea un cifrado criptográfico para garantizar su titularidad y asegurar la integridad de las transacciones, y controlar la creación de unidades adicionales, es decir, evitar que alguien pueda hacer copias como haríamos, por ejemplo, con una foto. Estas monedas no existen de forma física: se almacenan en una cartera digital.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="col-12 border-top border-bottom">
+            <div class="col-12">
+                <div class="row col-12 p-5 text-center">
+                    <h3 class="title">
+                        Obten el precio la moneda mas popular...el bitcoin
+                    </h3>
+                </div>
+                <div class="row text-center p-5">
+                    <div class="col-4">
+                        <img width="150" height="150" class="img-fluid" src="./scr/assets/bitcoin.svg" alt="logo bitcoin">
+                    </div>
+                    <div class="col-4">
+                        <img width="150" height="150" class="img-fluid" src="./scr/assets/estadistica.png" alt="logo bitcoin">
+                    </div>
+                    <div class="col-4">
+                        <img width="150" height="150" class="img-fluid" src="./scr/assets/wallet.png" alt="logo bitcoin">
+                    </div>
+                </div>
+                <div class="row text-center p-5">
+                    <p class="col-4">
+                        Bitcoin es el nombre que recibió la primera criptomoneda. Data del año 2009, es una moneda virtual o un medio de intercambio electrónico que sirve para adquirir productos y servicios como cualquier otra moneda.
+                    </p>
+                    <p class="col-4">
+                        Al igual que el resto de criptomonedas, no existe ningún tipo de regulación para ella.
+                    </p>
+                    <p class="col-4">
+                        Consiste en una clave criptográfica que se asocia a un monedero virtual, el cual descuenta y recibe pagos.
+                    </p>
+                </div>
+            </div>
+        </section>
         <section>
             <div class="dates">
                 <div class="outputs">
@@ -91,6 +158,89 @@
             </div>
         </section>
     </main>
+
+    <!-- Inicio footer -->
+    <footer class="text-center text-lg-start bg-white text-muted border-top">
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">Redes sociales</h6>
+                <div class="d-flex">
+                    <a href="#" class="p-2">
+                        <img width="25" height="25" src="./scr/assets/facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#" class="p-2">
+                        <img width="25" height="25" src="./scr/assets/twitter.svg" alt="twitter">
+                    </a>
+                    <a href="#" class="p-2">
+                        <img width="25" height="25" src="./scr/assets/github.svg" alt="github">
+                    </a>
+                </div>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Sobre Nosotros</h6>
+                <p>
+                    <a href="#" class="text-reset text-decoration-none">Contáctanos</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset text-decoration-none">Facturación</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset text-decoration-none">Privacidad</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">Servicios</h6>         
+                <p>
+                  <a href="#" class="text-reset text-decoration-none">Plataformas</a>
+                </p>
+                <p>
+                  <a href="#" class="text-reset text-decoration-none">Medios de pago</a>
+                </p>
+                <p>
+                  <a href="#" class="text-reset text-decoration-none">Acerca de nosotros</a>
+                </p>          
+              </div>
+              <!-- Grid column -->
+      
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4 contact">Soporte</h6>
+                <p>
+                    <a href="#" class="text-reset text-decoration-none">Danos tu opinión</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset text-decoration-none">Centro de soporte</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset text-decoration-none">Legal</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+          © 2022 Copyright. Desarrollada para Ucamp
+        </div>
+        <!-- Copyright -->
+      </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scr/js/graphs.js" type="module"></script>
