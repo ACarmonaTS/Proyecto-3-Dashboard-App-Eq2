@@ -2,7 +2,9 @@ const url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=mxn&orde
 const urlPart1 = "https://api.coingecko.com/api/v3/coins/bitcoin/history?date=";
 const urlPart2 = "&localization=mxn";
 
-async function coinsPast(){
+document.getElementById("search").addEventListener("click", coinsPast );
+
+export async function coinsPast(){
     const day = document.getElementById("daysInput").value;
     const month = document.getElementById("monthsInput").value;
     const year = document.getElementById("yearsInput").value;
