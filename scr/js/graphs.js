@@ -29,7 +29,7 @@ function datas(){
             labels: theDates.labelsDays,
             datasets: [{
             label: 'Valor del Bitcoin',
-            data: datasCoins,//[ 2, 3, 5, 8, 9, 10, 1],
+            data: datasCoins,
             borderWidth: 1
             }]
         },
