@@ -3,51 +3,35 @@ import * as theDates from "./record.js"
 
 const urlPart1 = "https://api.coingecko.com/api/v3/coins/bitcoin/history?date=";
 const urlPart2 = "&localization=mxn";
+const dataCoins = theDates.labelsDays;
+let datasCoins = [];
 
-var labelsDates = [];
-
-async function dataGraph(){
-    let labelsDays = theDates.labelsDays;
-    let arrayDate = [];
-    for( let sevenDays = 5; sevenDays > -1; sevenDays--)
-        arrayDate[sevenDays] = await coinsPast(labelsDays[sevenDays])
-    arrayDate.push(await coinsPast(labelsDays[6]));
-    labelsDates = arrayDate;
-    console.log(labelsDates);
-}
-
-async function coinsPast(date){
-    const urlDate = urlPart1 + date + urlPart2; 
-    let res = await fetch(urlDate);
-    let data = await res.json();
-    let dato = data.market_data.current_price.mxn;
-    return dato;
-}
-
-function graph(label, labelCurrent){
-    dataGraph()
-    console.log(label)
-    console.log(labelCurrent);
-    const ctx = document.getElementById('graph');
-
-    new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: label,
-        datasets: [{
-        label: '# of Votes',
-        data: labelCurrent,
-        borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-        y: {
-            beginAtZero: true
-        }
-        }
+async function coinsHistory() {
+    const urlDate = [] 
+    for( let day = 0; day < 7; day++){
+        urlDate[day] = urlPart1 + dataCoins[day] + urlPart2;
+        let res = await fetch(urlDate[day]);
+        let data = await res.json();
+        let dato = data.market_data.current_price.mxn;
+        datasCoins[day] = dato;
+        datasCoins[day] = Number.parseFloat(datasCoins[day]).toFixed(2);
     }
+    datas();
+}
+
+coinsHistory();
+
+function datas(){
+    const ctx = document.getElementById('graph');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: theDates.labelsDays,
+            datasets: [{
+            label: 'Valor del Bitcoin',
+            data: datasCoins,
+            borderWidth: 1
+            }]
+        },
     });
 }
-
-graph(theDates.labelsDays, labelsDates);

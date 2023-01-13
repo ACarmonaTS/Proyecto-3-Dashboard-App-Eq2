@@ -1,6 +1,3 @@
-const urlPart1 = "https://api.coingecko.com/api/v3/coins/bitcoin/history?date=";
-const urlPart2 = "&localization=mxn";
-
 const now = new Date();
 
 const calculateDate = (toDay, days) => {
@@ -18,27 +15,6 @@ const arrayDates = () => {
     arrayDate.push(calculateDate(now, 6));
     return arrayDate
 }
-//data
+
 export let labelsDays = arrayDates();
-
-// export var labelsDates = [];
-
-// export async function dataGraph(){
-//     let labelsDays = arrayDates();
-//     let arrayDate = [];
-//     for( let sevenDays = 5; sevenDays > -1; sevenDays--)
-//         arrayDate[sevenDays] = await coinsPast(labelsDays[sevenDays])
-//     arrayDate.push(await coinsPast(labelsDays[6]));
-//     labelsDates = arrayDate;
-//     console.log(labelsDates);
-// }
-
-// async function coinsPast(date){
-//     const urlDate = urlPart1 + date + urlPart2; 
-//     let res = await fetch(urlDate);
-//     let data = await res.json();
-//     let dato = data.market_data.current_price.mxn;
-//     return dato;
-// }
-
-// dataGraph();
+console.log(labelsDays);
