@@ -5,15 +5,11 @@ const urlPart2 = "&localization=mxn";
 document.getElementById("search").addEventListener("click", coinsPast);
 
 async function coinsPast() {
-  const day = document.getElementById("daysInput").value;
-  const month = document.getElementById("monthsInput").value;
-  const year = document.getElementById("yearsInput").value;
-  const urlDate = urlPart1 + day + "-" + month + "-" + year + urlPart2;
-  let res = await fetch(urlDate);
+  let date = document.getElementById("date").value;
+  let res = await fetch(urlPart1 + date.split("-").reverse().join('-') + urlPart2);
   let data = await res.json();
   let dato = data.market_data.current_price.mxn;
-  document.getElementById("showValuePast").value =
-    "$" + Number.parseFloat(dato).toFixed(2).toString() + " M.N.";
+  document.getElementById("showValuePast").value = "$" + Number.parseFloat(dato).toFixed(2).toString() + " M.N.";
 }
 
 const coinsNow = async () => {
@@ -21,8 +17,7 @@ const coinsNow = async () => {
   let res = await fetch(url);
   let data = await res.json();
   let dato = data[0].current_price;
-  document.getElementById("showValueNow").value =
-    "$" + Number.parseFloat(dato).toFixed(2).toString() + " M.N.";
+  document.getElementById("showValueNow").value = "$" + Number.parseFloat(dato).toFixed(2).toString() + " M.N.";
 };
 
 coinsNow();
