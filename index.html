@@ -9,32 +9,32 @@
     <link rel="stylesheet" href="./scr/css/descktop.css">
 </head>
 <body>
-    <header class="bg-black d-flex align-items-center">
-        <div class="logo-wrapper w-25">
-            <img src="https://via.placeholder.com/250x100.png" alt="logo">
-        </div>
-        <nav class="w-75 d-flex justify-content-around align-items-center">
-            <ul class="list-unstyled d-flex">
-                <li class="p-2">
-                    <a href="#" class="text-decoration-none">Comprar cripto</a>
-                </li>
-                <li class="p-2">
-                    <a href="#" class="text-decoration-none">Mercados</a>
-                </li>
-                <li class="p-2">
-                    <a href="#" class="text-decoration-none">Trade</a>
-                </li>
-                <li class="p-2">
-                    <a href="#" class="text-decoration-none">Finanzas</a>
-                </li>
-            </ul>
-            <div class="w-25">
-                <button type="button" class="btn btn-primary">Registrarse</button>
-                <button type="button" class="btn btn-secondary">Iniciar Sesion</button>
-            </div>
-        </nav>
-    </header>
     <main>
+        <header class="bg-black d-flex align-items-center header">
+            <div class="logo-wrapper w-25">
+                <img src="./scr/assets/gecko.png" alt="logo">
+            </div>
+            <nav class="w-75 d-flex justify-content-around align-items-center">
+                <ul class="list-unstyled d-flex">
+                    <li class="p-2">
+                        <a href="#" class="text-decoration-none">Comprar cripto</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="#" class="text-decoration-none">Mercados</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="#" class="text-decoration-none">Trade</a>
+                    </li>
+                    <li class="p-2">
+                        <a href="#" class="text-decoration-none">Finanzas</a>
+                    </li>
+                </ul>
+                <div class="w-25 login">
+                    <button type="button" class="btn btn-primary">Registrarse</button>
+                    <button type="button" class="btn btn-secondary">Iniciar Sesion</button>
+                </div>
+            </nav>
+        </header>
         <section class="col-12 p-5">
             <div class="info-wrapper row p-3">
                 <div class="col-4 w-50">
@@ -49,46 +49,32 @@
                 </div>
             </div>
         </section>
-        <section class="col-12 border-top border-bottom">
-            <div class="col-12">
-                <div class="row col-12 p-5 text-center">
-                    <h3 class="title">
-                        Obten el precio la moneda mas popular...el bitcoin
-                    </h3>
-                </div>
-                <div class="row text-center p-5">
-                    <div class="col-4">
-                        <img width="150" height="150" class="img-fluid" src="./scr/assets/bitcoin.svg" alt="logo bitcoin">
-                    </div>
-                    <div class="col-4">
-                        <img width="150" height="150" class="img-fluid" src="./scr/assets/estadistica.png" alt="logo bitcoin">
-                    </div>
-                    <div class="col-4">
-                        <img width="150" height="150" class="img-fluid" src="./scr/assets/wallet.png" alt="logo bitcoin">
-                    </div>
-                </div>
-                <div class="row text-center p-5">
-                    <p class="col-4">
-                        Bitcoin es el nombre que recibió la primera criptomoneda. Data del año 2009, es una moneda virtual o un medio de intercambio electrónico que sirve para adquirir productos y servicios como cualquier otra moneda.
-                    </p>
-                    <p class="col-4">
-                        Al igual que el resto de criptomonedas, no existe ningún tipo de regulación para ella.
-                    </p>
-                    <p class="col-4">
-                        Consiste en una clave criptográfica que se asocia a un monedero virtual, el cual descuenta y recibe pagos.
-                    </p>
-                </div>
+        <div class = "news">
+            <h1 class="title news-title">Obten el precio la moneda mas popular...el bitcoin</h1>
+            <div class = "news-section">
+                <section class="news-section1">        
+                <img src="./scr/assets/bitcoin.svg" class="image-news in-1">              
+                <p class="item-description">Bitcoin es el nombre que recibió la primera criptomoneda. Data del año 2009, es una moneda virtual o un medio de intercambio electrónico.</p>
+                </section>
+                <section class="news-section2">        
+                <img src="./scr/assets/estadistica.png" class="image-news in-2">              
+                <p class="item-description">Al igual que el resto de criptomonedas, no existe ningún tipo de regulación para ella.</p>
+                </section>
+                <section class="news-section3">        
+                <img src="./scr/assets/wallet.png" class="image-news in-3">              
+                <p class="item-description">Consiste en una clave criptográfica que se asocia a un monedero virtual, el cual descuenta y recibe pagos.</p>
+                </section>
             </div>
-        </section>
+        </div>
         <section>
             <div class="dates">
                 <div class="outputs">
-                    <label>Bitcoin hoy: </label>
+                    <label class="bit-today">Bitcoin hoy </label>
                     <input id="showValueNow" type="text" readonly>
                 </div>
                 <div class="datePast">
                     <div>
-                        <label>Historial de Bitcoin</label>
+                        <label class="bit-today">Historial de Bitcoin</label>
                     </div>
                     <div class="listOptions">
                         <select id="daysInput" class="form-select days" >
@@ -157,8 +143,6 @@
                 <canvas id="graph"></canvas>
             </div>
         </section>
-    </main>
-
     <!-- Inicio footer -->
     <footer class="text-center text-lg-start bg-white text-muted border-top">
         <!-- Section: Links  -->
@@ -172,13 +156,13 @@
                 <h6 class="text-uppercase fw-bold mb-4">Redes sociales</h6>
                 <div class="d-flex">
                     <a href="#" class="p-2">
-                        <img width="25" height="25" src="./scr/assets/facebook.svg" alt="facebook">
+                        <img width="25" height="25" src="./scr/assets/facebook.png" alt="facebook">
                     </a>
                     <a href="#" class="p-2">
-                        <img width="25" height="25" src="./scr/assets/twitter.svg" alt="twitter">
+                        <img width="25" height="25" src="./scr/assets/twitter.png" alt="twitter">
                     </a>
                     <a href="#" class="p-2">
-                        <img width="25" height="25" src="./scr/assets/github.svg" alt="github">
+                        <img width="25" height="25" src="./scr/assets/github.png" alt="github">
                     </a>
                 </div>
               </div>
@@ -189,10 +173,7 @@
                 <h6 class="text-uppercase fw-bold mb-4">Sobre Nosotros</h6>
                 <p>
                     <a href="#" class="text-reset text-decoration-none">Contáctanos</a>
-                </p>
-                <p>
-                    <a href="#" class="text-reset text-decoration-none">Facturación</a>
-                </p>
+                </p>                
                 <p>
                     <a href="#" class="text-reset text-decoration-none">Privacidad</a>
                 </p>
@@ -204,10 +185,7 @@
                 <h6 class="text-uppercase fw-bold mb-4">Servicios</h6>         
                 <p>
                   <a href="#" class="text-reset text-decoration-none">Plataformas</a>
-                </p>
-                <p>
-                  <a href="#" class="text-reset text-decoration-none">Medios de pago</a>
-                </p>
+                </p>                
                 <p>
                   <a href="#" class="text-reset text-decoration-none">Acerca de nosotros</a>
                 </p>          
@@ -220,10 +198,7 @@
                 <h6 class="text-uppercase fw-bold mb-4 contact">Soporte</h6>
                 <p>
                     <a href="#" class="text-reset text-decoration-none">Danos tu opinión</a>
-                </p>
-                <p>
-                    <a href="#" class="text-reset text-decoration-none">Centro de soporte</a>
-                </p>
+                </p>                
                 <p>
                     <a href="#" class="text-reset text-decoration-none">Legal</a>
                 </p>
@@ -237,10 +212,11 @@
       
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-          © 2022 Copyright. Desarrollada para Ucamp
+          © 2023 Copyright. Desarrollada para Ucamp
         </div>
         <!-- Copyright -->
       </footer>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="./scr/js/graphs.js" type="module"></script>
