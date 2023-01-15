@@ -1,9 +1,11 @@
 import * as apiFunctions from "./callApi.js";
-import * as theDates from "./record.js";
+// import * as theDates from "./record.js";
+import { arrayDates } from "./record.js";
 
 const urlPart1 = "https://api.coingecko.com/api/v3/coins/bitcoin/history?date=";
 const urlPart2 = "&localization=mxn";
-const dataCoins = theDates.labelsDays;
+// const dataCoins = theDates.labelsDays;
+const dataCoins = arrayDates();
 let datasCoins = [];
 
 async function coinsHistory() {
@@ -26,7 +28,8 @@ function datas() {
   new Chart(ctx, {
     type: "bar",
     data: {
-      labels: theDates.labelsDays,
+      // labels: theDates.labelsDays,
+      labels: dataCoins,
       datasets: [
         {
           label: "Valor del Bitcoin",

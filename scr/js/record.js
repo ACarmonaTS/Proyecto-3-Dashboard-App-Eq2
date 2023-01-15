@@ -1,3 +1,5 @@
+export {arrayDates};
+
 const now = new Date();
 
 const calculateDate = (toDay, days) => {
@@ -9,12 +11,12 @@ const calculateDate = (toDay, days) => {
 }
 
 const arrayDates = () => {
-    let arrayDate = []
+    let arrayDate = [];
     for( let sevenDays = 5; sevenDays > -1; sevenDays--)
         arrayDate[sevenDays] = calculateDate(now, -1)
     arrayDate.push(calculateDate(now, 6));
-    return arrayDate
+    return arrayDate;
 }
 
-export let labelsDays = arrayDates();
-console.log(labelsDays);
+// export let labelsDays = arrayDates();
+// console.log(labelsDays);
